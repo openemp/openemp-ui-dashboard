@@ -6,10 +6,13 @@ module.exports = webpackConfigEnv => {
   const defaultConfig = singleSpaDefaults({
     orgName: "openemp-mf",
     projectName: "dashboard",
-    webpackConfigEnv
+    webpackConfigEnv,
   });
 
   return webpackMerge.smart(defaultConfig, {
     // customizations can go here
+    devServer: {
+      port: 9001,
+    },
   });
 };
