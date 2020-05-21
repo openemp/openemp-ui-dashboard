@@ -9,13 +9,9 @@ const lifecycles = singleSpaReact({
   ReactDOM,
   rootComponent: Root,
   errorBoundary(err, info, props) {
-    return (
-      <div className="h-16 flex items-center justify-between px-6 bg-primary text-white">
-        Error
-      </div>
-    );
+    return <div className="h-16 flex items-center justify-between px-6 bg-primary text-white">Error</div>;
   },
-  domElementGetter
+  domElementGetter,
 });
 
 export const bootstrap = lifecycles.bootstrap;
@@ -37,7 +33,7 @@ export const devtools = {
   overlays: {
     selectors: [".root.dashboardHeight"],
     options: {
-      color: "red"
-    }
-  }
+      color: "red",
+    },
+  },
 };
