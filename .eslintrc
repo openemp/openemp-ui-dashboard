@@ -1,4 +1,15 @@
 {
-  "extends": ["react-important-stuff", "plugin:prettier/recommended"],
-  "parser": "babel-eslint"
+  "extends": ["airbnb", "airbnb/hooks", "react-important-stuff", "plugin:prettier/recommended"],
+  "parser": "babel-eslint",
+  "rules": {
+    "react/jsx-props-no-spreading": [0]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["@openemp-mf/styleguide", "../openemp-ui-styleguide/src/openemp-mf-styleguide.js"]]
+      }
+    },
+    "import/ignore": ["../"]
+  }
 }
