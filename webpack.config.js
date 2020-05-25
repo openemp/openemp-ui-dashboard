@@ -64,6 +64,9 @@ module.exports = (webpackConfigEnv = {}) => {
         exposes: {
           index: './src/index.js',
         },
+        remotes: {
+          '@openemp-mf/styleguide': '__openemp_mf_styleguide__',
+        },
         shared: ['react', 'react-dom', 'single-spa-react', '@material-ui/core', '@material-ui/core'],
       }),
       new HtmlWebpackPlugin({

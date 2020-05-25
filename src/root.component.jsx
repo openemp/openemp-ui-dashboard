@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 // import { links } from "./root.helper";
 // import { useHistory } from "react-router-dom";
 import PropTypes from 'prop-types';
@@ -18,6 +18,16 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+
+function loadComponent(scope, module) {
+  return async () => {
+    const factory = await window[scope].get(module);
+    const Module = factory();
+    return Module;
+  };
+}
+// eslint-disable-next-line dot-notation
+const Button = React.lazy(loadComponent('__openemp_mf_styleguide__', 'index'));
 
 // import { Button } from '@openemp-mf/styleguide';
 
@@ -85,6 +95,13 @@ const Root = (props) => {
           <Typography variant="h6" noWrap>
             OpenEMP
           </Typography>
+          {/* <Suspense fallback="loddding">
+            <Button>
+              <Typography variant="h6" noWrap>
+                OpenEMP
+              </Typography>
+            </Button>
+          </Suspense> */}
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
