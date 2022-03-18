@@ -1,9 +1,9 @@
 {
-  "name": "dashboard",
+  "name": "@openemp/dashboard",
   "repository": "git@github.com:openemp/openemp-ui-dashboard.git",
   "author": "OpenEMP",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "OpenEMP UI Dasboard MF",
   "scripts": {
     "lint": "eslint src",
@@ -16,6 +16,7 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
+    "@openemp/styleguide": "^0.0.2",
     "@reach/router": "1.3.3",
     "copy-webpack-plugin": "5.1.1",
     "material-ui": "^0.20.2",
@@ -25,6 +26,7 @@
     "single-spa-react": "^2.14.0"
   },
   "devDependencies": {
+    "@openemp/styleguide": "^0.0.2",
     "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-decorators": "^7.8.3",
