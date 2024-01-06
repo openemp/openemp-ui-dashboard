@@ -60,7 +60,7 @@
     "systemjs-webpack-interop": "^2.0.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-config-single-spa-react": "1.5.0",
+    "webpack-config-single-spa-react": "4.0.5",
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2"
   },
